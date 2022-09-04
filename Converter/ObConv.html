@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" 
+            name="description" content="Переведи что угодно! Лучший помощник для кулинарии, работы, учёбы и не только!"
+            name="keywords" content="конвертер объёма, объём, перевести, баррель, величины измерения, бочка, ведро, галлон, кубический, дециметр, метр, литр, миллилитр, пинта">
+            <link rel = "stylesheet" href="style.css">
+            <link rel="shortcut icon" href="../Converter/img/1.png" type="image/x-icon">
+            <title>ConvertAll</title>
+            <style>
+                body {background-image: url("../Converter/img/8.png");}  
+                main {  
+                    padding-top: 100px;
+                    padding-left: 100px;
+                }
+            </style>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="../Converter/js/scriptObConv.js">
+            </script>
+    </head>
+    <body>
+        <nav class="navbar header">
+            <div class="top">
+                <img src="../Converter/img/converter.png" class="lh">
+            </div>
+        </nav>
+        <main>
+            <div class="row">
+                <div class="col-md-9">
+                    <h2 class="zagolovok-fluid">Конвертер объёма</h2>
+                    <br>
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <div class="fs-5">Перевести из:</div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="col-md-12">
+                                        <input type="number" class="vvod form-control" id="vvod" placeholder="0" style="border-width: 3px; border-color: #00A3FF;">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <select id="v1" class="vel1 form-control" style="border-width: 3px; border-color: #00A3FF;">
+                                        <option value="" disabled selected>Выберите единицу измерения</span></option>
+                                        <option value="Баррель">Баррель</option>
+                                        <option value="Бочка">Бочка</option>
+                                        <option value="Ведро">Ведро</option>
+                                        <option value="Галлон">Галлон</option>
+                                        <option value="Кубический дециметр">Кубический дециметр</option>
+                                        <option value="Кубический метр">Кубический метр</option>
+                                        <option value="Литр">Литр</option>
+                                        <option value="Миллилитр">Миллилитр</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="fs-5">Во что пересчитать:</div> <br>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <select id="v2" class="vel2 form-control" style="border-width: 3px; border-color: #00A3FF;">
+                                        <option value="" disabled selected>Выберите единицу измерения</option>
+                                        <option value="Баррель">Баррель</option>
+                                        <option value="Бочка">Бочка</option>
+                                        <option value="Ведро">Ведро</option>
+                                        <option value="Галлон">Галлон</option>
+                                        <option value="Кубический дециметр">Кубический дециметр</option>
+                                        <option value="Кубический метр">Кубический метр</option>
+                                        <option value="Литр">Литр</option>
+                                        <option value="Миллилитр">Миллилитр</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="button" class="btn btn-md fs-5" style="border-width: 3px; background-color:#83CBFF; border-color: #00A3FF" value="Рассчитать" onclick="calculate(document.getElementById('form'))">
+                                </div>
+                            </div> <br>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="fs-5">Ответ:</div>
+                                </div>
+                                <div class="col-md-2">
+                                    <output class="form-control fs-5" id="otvet" style="border-width: 3px; border-color: #00A3FF">0</output>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel" style="background-color: rgba(217, 217, 217, 0.38); border-radius: 10px; margin-right: 30px;">
+                        <div class="panel-heading">
+                            <strong class="fs-5" style="padding: 32px;">Перевести:</strong>
+                        </div>
+                        <div class="panel-body">
+                            <ul type="circle">
+                                <li><a href="file:///C:/Users/Полина/Desktop/Converter/DlinaConv.html" class="fs-6">Длина</a></li>
+                                <li><a href="file:///C:/Users/Полина/Desktop/Converter/TempConv.html" class="fs-6">Температура</a></li>
+                                <li><a class="fs-6" href="file:///C:/Users/Полина/Desktop/Converter/CookConv.html">Кулинарный конвертер</a></li>
+                                <li><a href="file:///C:/Users/Полина/Desktop/Converter/ObConv.html" class="fs-6">Объём</a></li>
+                                <li><a href="file:///C:/Users/Полина/Desktop/Converter/MassaConv.html" class="fs-6">Масса</a></li>
+                                <li><a href="file:///C:/Users/Полина/Desktop/Converter/RimConv.html" class="fs-6">Римские<->арабские</a></li>
+                            </ul>
+                            <br><br>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="file:///C:/Users/Полина/Desktop/Converter/Predl.html" class="fs-6" style="padding: 32px;">Ваши предложения</a>
+                        </div>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
